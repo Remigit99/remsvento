@@ -59,3 +59,45 @@ header{
     padding-right: 3rem;
     border-right: 2px solid gray;
 }
+
+/*===== Learn Section ===*/
+
+.learn{
+    background-color: black;
+    padding: 4rem 0;
+    color: white;
+}
+
+.learn__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+}
+
+
+.learn__container-left img{
+    width: 400px;
+}
+
+
+
+.learn__container-right h2{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+
+ .learn__container-right p{
+    margin-bottom: 3rem ;
+} 
+
+.learnMoreBtn{
+    display: flex;
+    width: max-content;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    color: white;
+    background-color: rgb(192,108,223); ;
+}
