@@ -1,6 +1,38 @@
 
+nav{
+    height: 3.5rem;
+    display: grid;
+    place-items: center;
+    background-color: aliceblue;
+}
+
 .nav__container{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.logo span{
+    color: rgb(192,108,223);
+}
+
+.menu__links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+
+.reg_login{
+    display: flex;
+    gap: 3rem;
+}
+
+.loginBtn{
+    background-color: rgb(192,108,223);
+    color: white;
+}
+.regBtn{
+    font-weight: 600;
 }
