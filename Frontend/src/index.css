@@ -17,6 +17,11 @@ body{
   font-family: 'Poppins', cursive;
 }
 
+h1{
+  font-size: 3.5rem;
+  line-height: 5rem;
+}
+
 .container{
   width: 80%;
   margin: 0 auto;

@@ -1,9 +1,14 @@
 
 nav{
-    height: 3.5rem;
+    height: 4rem;
     display: grid;
     place-items: center;
     background-color: aliceblue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
 }
 
 .nav__container{

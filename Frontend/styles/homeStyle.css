@@ -1,0 +1,61 @@
+header{
+    padding: 8rem 2rem;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mini{
+    color: rgb(192,108,223);
+
+}
+
+.header_parag{
+    color: gray;
+    width: 60%;
+    margin-bottom: 3rem;
+}
+
+.startBtn{
+    display: flex;
+    width: max-content;
+    align-items: center;
+    gap: 2rem;
+    color: white;
+    background-color: rgb(192,108,223); ;
+}
+
+.header_img{
+    width: 400px;
+}
+
+.header_stats{
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.amount_raised,
+.minimum,
+.val_cap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header_stats p{
+    color: gray;
+}
+
+.amount_raised, .minimum{
+    padding-right: 3rem;
+    border-right: 2px solid gray;
+}
