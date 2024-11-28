@@ -66,6 +66,7 @@ header{
     background-color: black;
     padding: 4rem 0;
     color: white;
+    border-bottom: 1px solid gainsboro;
 }
 
 .learn__container{
@@ -101,3 +102,112 @@ header{
     color: white;
     background-color: rgb(192,108,223); ;
 }
+
+
+.startup{
+    background-color: black;
+    color: white;
+    padding: 5rem 0;
+}
+
+
+.startup__container h2{
+    text-align: center;
+}
+.startup_strat{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: centre;
+    gap: 5rem;
+    margin-top: 4.5rem;
+}
+
+.startup_strat article{
+    background-color: rgb(248, 252, 255);
+    color: rgb(75, 75, 75);
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.startup_strat article:hover{
+    border-top: 2px solid rgb(192,108,223);
+    transform: all 300ms ease-in-out;
+}
+
+
+
+.startup_strat article h3{
+    color: rgb(192,108,223);
+    margin: 0.8rem 0;
+}
+
+
+.easy, .wisely{
+    padding: 4rem 0;
+}
+
+.easy__container, .wisely__container{
+    display: grid;
+place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.easy__container-left img{
+width: 400px;
+}
+
+.easy__container-right p{
+    color: gray;
+    margin: 1rem 0 1.5rem;
+}
+
+.easy_benefits div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+
+
+.wisely__container-rig img{
+    width: 450px;
+    }
+
+    .wisely__container-left p{
+        margin:1rem 0 2rem;
+        color: gray;
+    }
+
+
+    .intel{
+        background-color: black;
+        color: white;
+        padding: 4.5rem 0;
+    }
+
+    .intel_header{
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .intel_main{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+        place-items: center;
+        margin-top: 5rem;
+    }
+
+    .intel_main article{
+        padding: o.5rem 2rem;
+
+    }
+
+    .intel_main article h3{
+        margin: 1.2rem 0;
+    }
+
+    .intel_main article:not(:last-child){
+        border-right: 1px solid gray;
+    }

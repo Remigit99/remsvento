@@ -1,9 +1,14 @@
 
 import headerImg from "../assets/investo_header.png"
 import learnMoreImg from "../assets/investo_learn.png"
+import invest1 from "../assets/investo_port.png"
+import invest2 from "../assets/invest_wise.png"
+import icon1 from "../assets/icon1.png"
+import icon2 from "../assets/icon2.png"
+import icon3 from "../assets/icon3.png"
 import "../../styles/homeStyle.css"
 import { Link } from "react-router-dom"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, CheckCircle, Package } from "lucide-react"
 
 const Home = () => {
     return (
@@ -73,11 +78,178 @@ const Home = () => {
                         </p>
 
                         <Link to="/login" className="btn learnMoreBtn" >
-                            <p>Learn more</p>  <ArrowRight />
+                            <span>Learn more</span>  <ArrowRight />
                         </Link>
                     </div>
                 </div>
             </section>
+
+
+            <section className="startup">
+                <div className="container startup__container">
+                    <h2>
+                        Begin your startup journey on the <br></br>
+                        right foot by making strategic <br></br>
+                        investments
+                    </h2>
+
+                    <div className="startup_strat">
+                        <article>
+                            <div className="icon">
+                                <Package />
+                            </div>
+
+                            <h3>Increase value for Money</h3>
+                            <p>
+                                Investing is a smart strategy for making
+                                your money more useful and profitable over time.
+                                By investing you manage your finances effectively and have
+                                the potentialto  increase the value of your money.
+                            </p>
+                        </article>
+
+                        <article>
+                            <div className="icon">
+                                <Package />
+                            </div>
+
+                            <h3>Open the Knowledge</h3>
+                            <p>
+                                Your understanding of the economy and finance
+                                will broaden, potentially making you a reliable
+                                financial planner.
+                            </p>
+                        </article>
+                        <article>
+                            <div className="icon">
+                                <Package />
+                            </div>
+
+                            <h3>Achieving Your Freedom</h3>
+                            <p>
+                                Financial freedom is a state where you are financially
+                                independent. Meaning your income is sufficient to
+                                cover your needs without relying on external assistance.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section className="easy">
+                <div className="container easy__container">
+                    <div className="easy__container-left">
+                        <img src={invest1} />
+
+                    </div>
+
+
+                    <div className="easy__container-right">
+                        <h2>Investing in startups made easy</h2>
+
+                        <p>Investing doesn&apos;t have to be hard. We make it easy
+                            to invest for your future with simple, low-cost investment
+                            options and personalized advice.
+                        </p>
+
+                        <div className="easy_benefits">
+                            <div>
+                                <CheckCircle color="purple" />
+                                <h6>Smart Solutions for the automated world</h6>
+                            </div>
+                            <div>
+                                <CheckCircle color="purple" />
+                                <h6>Do great things everyday</h6>
+                            </div>
+                            <div>
+                                <CheckCircle color="purple" />
+                                <h6>Building a better future together  </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section className="wisely">
+                <div className="container wisely__container">
+
+
+                    <div className="wisely__container-left">
+                        <h2>Invest wisely, invest safely,<br></br> invest now</h2>
+
+                        <p>Investing can be a great way to grow your money,
+                            but it can be tricky to get started. Catch offers
+                            easy access toinf ormation about investing in startups
+
+                        </p>
+
+                        <div className="wisely_benefits">
+                            <Link to="/login" className="btn startBtn">
+                                <span>Start Investing Now</span>  <ArrowRight /> </Link>
+                        </div>
+                    </div>
+
+                    <div className="wisely__container-right">
+                        <img src={invest2} />
+
+                    </div>
+
+                </div>
+            </section>
+
+            <section className="intel">
+                <div className="container intel__container">
+                    <div className="intel_header">
+                        <h2>
+                            Investing in startups <br></br>
+                            intelligently
+                        </h2>
+
+                        <div className="intel_main">
+                            <article>
+                                <div className="icon">
+                                    <img src={icon1} />
+                                </div>
+                                <h3>The complexity of simplicity</h3>
+
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, quaerat.
+                                </p>
+                            </article>
+
+                            
+                            <article>
+                                <div className="icon">
+                                <img src={icon2} />
+
+                                </div>
+                                <h3>Amazing service. It sets our business apart</h3>
+
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, quaerat.
+                                </p>
+                            </article>
+
+                            <article>
+                                <div className="icon">
+                                    <img src={icon3} />
+
+                                </div>
+                                <h3>Do great things everyday with easy</h3>
+
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, quaerat.
+                                </p>
+                            </article>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
         </>
     )
 }
