@@ -8,7 +8,7 @@ import icon2 from "../assets/icon2.png"
 import icon3 from "../assets/icon3.png"
 import "../../styles/homeStyle.css"
 import { Link } from "react-router-dom"
-import { ArrowRight, CheckCircle, Package } from "lucide-react"
+import { ArrowRight, CheckCircle, Package, Facebook, TwitterIcon, Instagram, Youtube } from "lucide-react"
 
 const Home = () => {
     return (
@@ -218,10 +218,10 @@ const Home = () => {
                                 </p>
                             </article>
 
-                            
+
                             <article>
                                 <div className="icon">
-                                <img src={icon2} />
+                                    <img src={icon2} />
 
                                 </div>
                                 <h3>Amazing service. It sets our business apart</h3>
@@ -249,6 +249,57 @@ const Home = () => {
                 </div>
 
             </section>
+
+            <footer>
+                <div className="container footer__container">
+                    <div className="footer__container-left">
+                        <Link to="/" className="logo">
+                            <h3>rem<span>Vento</span></h3>
+                        </Link>
+
+                        <p>
+                            Invest with confidence.
+                        </p>
+
+                        <div className="footer__socials">
+                            <Facebook />
+                            <TwitterIcon />
+                            <Instagram />
+                            <Youtube />
+                        </div>
+                    </div>
+
+
+                    <div className="footer__container-right">
+
+                        <article>
+                            <h5>Company</h5>
+                            <Link to="/">About Us</Link>
+                            <Link to="/">Contact Us</Link>
+                            <Link to="/">Career</Link>
+                            <Link to="/">Blog</Link>
+                        </article>
+
+                        <article>
+                            <h5>Features</h5>
+                            <Link to="/">Pricing</Link>
+                            <Link to="/">Products</Link>
+                            <Link to="/">Updates</Link>
+                            <Link to="/">Ivesting</Link>
+                            <Link to="/">Options</Link>
+                            <Link to="/">Overview</Link>
+                        </article>
+
+                        <article>
+                            <h5>Legal</h5>
+                            <Link to="/">Privacy Policy</Link>
+                            <Link to="/">Terms of Service</Link>
+
+                        </article>
+
+                    </div>
+                </div>
+            </footer>
 
         </>
     )

@@ -211,3 +211,43 @@ width: 400px;
     .intel_main article:not(:last-child){
         border-right: 1px solid gray;
     }
+
+
+    /*===== Footer =====*/
+
+    footer{
+        padding: 5rem 0 1rem;
+    }
+
+    .footer__container{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        /* place-items: center; */
+    }
+
+    .footer__container-left p{
+        margin: 0.5rem 0 1rem;
+        color: gray;
+    }
+
+    .footer__socials{
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .footer__container-right{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+        /* place-items: center; */
+    }
+
+    .footer__container-right article{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .footer__container-right article h5{
+        font-size: 1.2rem;
+    }
