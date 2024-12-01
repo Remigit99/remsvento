@@ -59,6 +59,25 @@ export const registerController  = async(req, res) =>{
 
 }
 
+export const verifyEmailController = async (req, res) =>{
+
+    try {
+        const {code} = req.body
+
+        // const updateVerifyEmail = await User.findByIdAndUpdate({_id: code},{verify_email: true})
+        const user = await User.findOne({_id: code})
+
+        if(!user){
+            return res.status(400).json({message: "User does exists"})
+        }
+
+        const updateUser = await User.updateOne({_id: code},{verify_email: true})
+
+        return res.status(200).json({message: "Email Successfully Verified"})
+    } catch (error) {
+        return res.status(500).json({message: "Error Verifying User Email"})
+    }
+}
 
 //Login Controller
 
