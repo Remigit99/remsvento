@@ -1,6 +1,12 @@
 import mongoose from "mongoose";
 import { userModel as User } from "../model/user.model.js";
 import bcrypt from "bcryptjs"
+import dotenv from "dotenv"
+import { resendEmail } from "../config/verifyEmail.js";
+import verifyEmailTemplate from "../utilis/verifyEmailTemplate.js"
+
+dotenv.config()
+
 
 
 //Registration controller
@@ -11,9 +17,9 @@ export const registerController  = async(req, res) =>{
 
     //Check if name, email, password and role was passed
 
-        const { name, email, password, role} = req.body
+        const { name, email, password, } = req.body
 
-        if (!name || !email || !password || !role){
+        if (!name || !email || !password){
             return res.status(401).json({message: "All fields compulsory"})
         }
         
@@ -32,8 +38,8 @@ export const registerController  = async(req, res) =>{
         const newUser = await User({
             name,
             email,
-            password: hashedPassword,
-            role
+            password: hashedPassword
+            
         })
 
         //save user
@@ -41,6 +47,9 @@ export const registerController  = async(req, res) =>{
         const  savedUser = await newUser.save()
         console.log(savedUser)
 
+        const  emailVerificationUrl = `${process.env.FRONTEND_URL}/verify-email?code=${savedUser?._id}` 
+
+        const sendVerifyEmail = await resendEmail({sendTo: email, emailSubject: "Verify Email", htmlContent: verifyEmailTemplate({name, verifyEmailUrl: emailVerificationUrl})})
         return res.status(201).json({message: "User Registered Successfully"})
 
 

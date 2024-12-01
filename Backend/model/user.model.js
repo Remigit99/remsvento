@@ -12,7 +12,7 @@ const UserSchema = new mongoose.Schema(
       type: String,
       required: true,
       unique: true,
-    //   lowercase: true,
+      //   lowercase: true,
     },
     password: {
       type: String,
@@ -20,17 +20,37 @@ const UserSchema = new mongoose.Schema(
     },
     role: {
       type: String,
-      enum: ['Investor', 'Admin'],
-      default: 'Investor',
+      enum: ["Investor", "Admin"],
+      default: "Investor",
+    },
+    avatar: {
+      type: String,
+      default: "",
+    },
+    mobile: {
+      type: String,
+      default: "",
+    },
+    refresh_token: {
+      type: String,
+      default: "",
+    },
+    verify_email: {
+      type: Boolean,
+      default: false,
+    },
+    last_login_date: {
+      type: Date,
+      default: null
     },
     wallet: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'Wallet',
+      ref: "Wallet",
     },
     investments: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Investment',
+        ref: "Investment",
       },
     ],
   },
@@ -38,4 +58,4 @@ const UserSchema = new mongoose.Schema(
 );
 
 // Export User Model
-export const userModel= mongoose.model('User', UserSchema);
+export const userModel = mongoose.model("User", UserSchema);
