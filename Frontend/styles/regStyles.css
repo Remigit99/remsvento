@@ -63,6 +63,16 @@
     gap: 1rem;
 }
 
+
+.toReg, .toLogin{
+    text-align: center;
+}
+
+.toReg a, .toLogin a{
+    color:  rgb(192,108,223);
+    font-weight: 700;
+}
+
 .error{
     color: red;
     /* margin-left: 1rem; */

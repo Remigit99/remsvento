@@ -5,6 +5,7 @@ import "../../styles/regStyles.css"
 import { User2, LockIcon, Eye, EyeOff, LoaderIcon } from "lucide-react"
 import { AiOutlineMail } from "react-icons/ai";
 import { useState, } from "react"
+import {Link} from "react-router-dom"
 
 
 const registrationSchema = z.object({
@@ -127,6 +128,10 @@ const Register = () => {
 
 
           </Formik>
+
+          <div className="toLogin">
+            <p>Already have an account? <Link to="/login">Login</Link></p>
+          </div>
 
 
         </div>
