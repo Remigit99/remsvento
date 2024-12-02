@@ -2,7 +2,9 @@ import { Formik, Field, Form, ErrorMessage } from "formik"
 import { z } from "zod"
 import { toFormikValidationSchema } from "zod-formik-adapter"
 import "../../styles/regStyles.css"
-
+import { User2, LockIcon, Eye, EyeOff } from "lucide-react"
+import { AiOutlineMail } from "react-icons/ai";
+import { useState, } from "react"
 
 
 const registrationSchema = z.object({
@@ -26,6 +28,8 @@ const registrationSchema = z.object({
 
 const Register = () => {
 
+  const [showPassword, setShowPassword] = useState(false)
+
   const initialValues = {
     name: '',
     email: '',
@@ -38,7 +42,7 @@ const Register = () => {
       console.log('Submitting form data:', values);
       await new Promise((resolve) => setTimeout(resolve, 2000)); // Simulate async operation
       alert('Form submitted successfully!');
-      resetForm(); 
+      resetForm();
     } catch (error) {
       console.error('Submission error:', error);
     } finally {
@@ -77,13 +81,16 @@ const Register = () => {
               <Form className="registration-form">
                 <div className="inputGroup">
                   <label htmlFor="name">Name</label>
-                  <div className="inputField"><Field className="input" name="name" type="text" /></div>
+                  <div className="inputField">
+                    <User2 />
+                    <Field className="input" name="name" type="text" /></div>
                   <ErrorMessage name="name" component="div" className="error" />
                 </div>
 
                 <div className="inputGroup">
                   <label htmlFor="email">Email</label>
                   <div className="inputField">
+                    <AiOutlineMail />
                     <Field className="input" name="email" type="email" /> </div>
                   <ErrorMessage name="email" component="div" className="error" />
                 </div>
@@ -91,11 +98,25 @@ const Register = () => {
                 <div className="inputGroup">
                   <label htmlFor="password">Password</label>
                   <div className="inputField">
-                    <Field className="input" name="password" type="password" /> </div>
+                    <LockIcon />
+                    <Field className="input" name="password" type= {showPassword ? "text" :"password" }/>
+
+                    {
+                      showPassword ?
+                        <Eye 
+                        onClick={() => setShowPassword(!showPassword)}
+                        /> :
+                        <EyeOff
+                        onClick={() => setShowPassword(!showPassword)}
+            
+                        />
+                    }
+
+                  </div>
                   <ErrorMessage name="password" component="div" className="error" />
                 </div>
 
-                <button className="btn submitBtn"  type="submit" disabled={isSubmitting}>
+                <button className="btn submitBtn" type="submit" disabled={isSubmitting}>
                   Register
                 </button>
               </Form>

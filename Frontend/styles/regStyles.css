@@ -12,6 +12,7 @@
     border-radius: 1rem;
     box-shadow: 0 0 10px gainsboro;
     padding: 1rem 1.5rem;
+    background-color: rgb(255, 255, 250);
 }
 
 .reg__main-header h2{
@@ -35,6 +36,8 @@
     box-shadow: 0 0 3px gainsboro;
     border-radius: 0.5rem;
     padding: 0 0.5rem;
+    display: flex;
+    align-items: center;
 
 }
 
