@@ -126,8 +126,6 @@ const Login = () => {
 
           </Formik>
 
-
-
           <div className="toReg">
             <p>Don&apos;t have an account? <Link to="/register">Sign Up</Link></p>
           </div>
