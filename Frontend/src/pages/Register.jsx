@@ -2,7 +2,7 @@ import { Formik, Field, Form, ErrorMessage } from "formik"
 import { z } from "zod"
 import { toFormikValidationSchema } from "zod-formik-adapter"
 import "../../styles/regStyles.css"
-import { User2, LockIcon, Eye, EyeOff } from "lucide-react"
+import { User2, LockIcon, Eye, EyeOff, LoaderIcon } from "lucide-react"
 import { AiOutlineMail } from "react-icons/ai";
 import { useState, } from "react"
 
@@ -99,16 +99,16 @@ const Register = () => {
                   <label htmlFor="password">Password</label>
                   <div className="inputField">
                     <LockIcon />
-                    <Field className="input" name="password" type= {showPassword ? "text" :"password" }/>
+                    <Field className="input" name="password" type={showPassword ? "text" : "password"} />
 
                     {
                       showPassword ?
-                        <Eye 
-                        onClick={() => setShowPassword(!showPassword)}
+                        <Eye
+                          onClick={() => setShowPassword(!showPassword)}
                         /> :
                         <EyeOff
-                        onClick={() => setShowPassword(!showPassword)}
-            
+                          onClick={() => setShowPassword(!showPassword)}
+
                         />
                     }
 
@@ -117,7 +117,10 @@ const Register = () => {
                 </div>
 
                 <button className="btn submitBtn" type="submit" disabled={isSubmitting}>
-                  Register
+                  <span>Register </span>
+                  {
+                    isSubmitting ? <LoaderIcon /> : ""
+                  }
                 </button>
               </Form>
             )}
