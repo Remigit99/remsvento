@@ -5,7 +5,8 @@ import "../../styles/regStyles.css"
 import { LockIcon, Eye, EyeOff, LoaderIcon } from "lucide-react"
 import { AiOutlineMail } from "react-icons/ai";
 import { useState, } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import axios from "axios"
 
 
 const registrationSchema = z.object({
@@ -29,17 +30,24 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false)
 
   const initialValues = {
-    name: '',
     email: '',
     password: '',
   };
 
+  const navigate = useNavigate()
 
   const handleSubmit = async (values, { resetForm, setSubmitting }) => {
     try {
-      console.log('Submitting form data:', values);
-      await new Promise((resolve) => setTimeout(resolve, 2000)); // Simulate async operation
-      alert('Form submitted successfully!');
+      // console.log('Submitting form data:', values);
+      // await new Promise((resolve) => setTimeout(resolve, 2000)); // Simulate async operation
+      // alert('Form submitted successfully!');
+
+      const res = await axios.post("http://localhost:3000/api/user/login", values)
+
+      console.log(res)
+
+      navigate("/dashboard/remi")
+
       resetForm();
     } catch (error) {
       console.error('Submission error:', error);
